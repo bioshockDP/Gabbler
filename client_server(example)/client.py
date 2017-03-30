@@ -1,9 +1,22 @@
 import socket
+import os
 
-s = socket.socket()
-host = socket.gethostname()
-port = 12345
+# os.system("python3.5 server.py &")
+# time.sleep(2)
 
-s.connect((host, port))
-print s.recv(1024)
-s.close()
+# creating socket and connecting to server
+server_address = ('192.168.0.104', 2425)
+sock = socket.socket()
+sock.connect(server_address)
+
+while True:
+    message = input('enter your message: ')
+    if message == 'exit':
+        sock.close()
+        break
+
+    sock.sendall(message.encode())
+
+    data = sock.recv(1024).decode()
+    if data:
+        print('answer from server: %s' % data)
