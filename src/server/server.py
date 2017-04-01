@@ -7,7 +7,7 @@ from src.server.answers_for_client import *
 
 # creating socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address = ('localhost', 2424)
+server_address = ('localhost', 2422)
 s.bind(server_address)
 print('server started', file=sys.stderr)
 s.listen(10)
@@ -36,5 +36,6 @@ def client_thread(conn):
 # loop for accepting client
 while True:
     connection, client_address = s.accept()
+    connection.sendall("(якесь вітання)".encode())
     print('connection from', client_address, file=sys.stderr)
     start_new_thread(client_thread, (connection,))
