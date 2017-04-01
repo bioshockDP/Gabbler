@@ -5,7 +5,7 @@ from _thread import *
 
 # creating socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address = ('192.168.0.104', 2425)
+server_address = ('localhost', 2425)
 s.bind(server_address)
 print('server started', file=sys.stderr)
 s.listen(10)

@@ -1,11 +1,11 @@
 import socket
 import os
 
-# os.system("python3.5 server.py &")
+# os.system("python3.5 server_example.py &")
 # time.sleep(2)
 
 # creating socket and connecting to server
-server_address = ('192.168.0.104', 2425)
+server_address = ('localhost', 2425)
 sock = socket.socket()
 sock.connect(server_address)
 
