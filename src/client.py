@@ -4,7 +4,7 @@ import socket
 # time.sleep(2)
 
 # creating socket and connecting to server
-server_address = ('localhost', 2422)
+server_address = ('localhost', 2423)
 sock = socket.socket()
 sock.connect(server_address)
 

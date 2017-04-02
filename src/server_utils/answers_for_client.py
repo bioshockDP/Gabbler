@@ -1,4 +1,5 @@
-from src.data_base.mysql_connection import *
+from src.server_utils.db_utils import count_words
+from src.server_utils.parser import get_words
 
 
 def get_answer(data):

@@ -1,7 +1,6 @@
 from mysql.connector import MySQLConnection, Error
-
-from src.data_base.dbconfig import read_db_config
-from src.server.str_tools import *
+from src.server_utils.db_config import read_db_config
+from src.server_utils.parser import get_item
 
 
 def get_cursor():

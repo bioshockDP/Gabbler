@@ -2,12 +2,11 @@ import socket
 import sys
 import time
 from _thread import *
-
-from src.server.answers_for_client import *
+from src.server_utils.answers_for_client import get_answer
 
 # creating socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address = ('localhost', 2422)
+server_address = ('localhost', 2423)
 s.bind(server_address)
 print('server started', file=sys.stderr)
 s.listen(10)
