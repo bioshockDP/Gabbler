@@ -6,7 +6,7 @@ from src.server_utils.answers_for_client import get_answer
 
 # creating socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server_address = ('localhost', 2423)
+server_address = ('192.168.0.104', 2422)
 s.bind(server_address)
 print('server started', file=sys.stderr)
 s.listen(10)

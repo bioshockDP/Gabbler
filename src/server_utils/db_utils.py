@@ -16,7 +16,7 @@ def count_words(table_name, word_list):
     count = 0
     try:
         connection, cursor = get_cursor()
-        cursor.execute("select name from gubbler.{0}".format(table_name))
+        cursor.execute("select keywords from gabbler.{0}".format(table_name))
         row = cursor.fetchone()
 
         # comparing words in message and data base
